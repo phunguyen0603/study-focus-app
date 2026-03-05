@@ -183,7 +183,7 @@ saveBtn.addEventListener('click', async () => {
 
     try {
         // Dùng Fetch API để gửi POST request tới Backend
-        const response = await fetch("http://localhost:8000/api/sessions", {
+        const response = await fetch("https://study-focus-api-phu.onrender.com/api/sessions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -236,7 +236,7 @@ const moodIconMap = {
 // --- 3. Logic Xem Thống Kê (Đổi sang biểu đồ đường & Hiện nhật ký) ---
 statsBtn.addEventListener('click', async () => {
     try {
-        const response = await fetch("http://localhost:8000/api/sessions");
+        const response = await fetch("https://study-focus-api-phu.onrender.com/api/sessions");
         const sessions = await response.json();
 
         if (sessions.length === 0) {
@@ -319,7 +319,7 @@ resetBtn.addEventListener('click', () => {
     // Gọi Modal dạng 'confirm' và truyền đoạn code Xóa vào bên trong
     showModal("⚠️ Bạn có chắc chắn muốn xóa toàn bộ lịch sử và biểu đồ không?", 'confirm', async () => {
         try {
-            const response = await fetch("http://localhost:8000/api/sessions", {
+            const response = await fetch("https://study-focus-api-phu.onrender.com/api/sessions", {
                 method: "DELETE"
             });
             
