@@ -6,7 +6,8 @@ Một ứng dụng web Full-stack giúp quản lý thời gian học tập, đo 
 * **Frontend:** https://study-focus-app-phu.vercel.app  
 * **Backend:** https://study-focus-api-phu.onrender.com
 
-*(Bạn có thể thay thế dòng này bằng một bức ảnh chụp màn hình giao diện web của bạn)*
+<img width="1920" height="1020" alt="Screenshot 2026-03-05 110708" src="https://github.com/user-attachments/assets/63062cc7-370b-4cf7-a2d4-3a07e12bcf90" />
+
 
 ## ✨ Tính năng nổi bật (Features)
 
