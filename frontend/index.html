@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Focus Analytics 📈</title> <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <div style="text-align: right; margin-bottom: 20px;">
+            <button id="themeToggle" style="background: none; color: var(--text-color); font-size: 1.5rem; padding: 0;">🌓</button>
+        </div>
+
+        <h1>Phiên Tập Trung 🎯</h1>
+        
+        <div id="timeSetup" style="margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; align-items: center;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label style="font-size: 0.9rem; color: #7f8c8d;">Giờ</label>
+                <input type="number" id="hoursInput" value="0" min="0" max="23" style="width: 50px; text-align: center; padding: 5px; border-radius: 5px; border: 1px solid #ccc; font-size: 1.1rem;">
+            </div>
+            <div style="font-size: 1.5rem; font-weight: bold; margin-top: 15px;">:</div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label style="font-size: 0.9rem; color: #7f8c8d;">Phút</label>
+                <input type="number" id="minutesInput" value="11" min="0" max="59" style="width: 50px; text-align: center; padding: 5px; border-radius: 5px; border: 1px solid #ccc; font-size: 1.1rem;">
+            </div>
+            <div style="font-size: 1.5rem; font-weight: bold; margin-top: 15px;">:</div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label style="font-size: 0.9rem; color: #7f8c8d;">Giây</label>
+                <input type="number" id="secondsInput" value="0" min="0" max="59" style="width: 50px; text-align: center; padding: 5px; border-radius: 5px; border: 1px solid #ccc; font-size: 1.1rem;">
+            </div>
+        </div>
+        <div id="timer" class="timer-display">11:00</div>
+        
+        <div class="controls">
+            <button id="startBtn">🚀 Bắt đầu</button>
+            <button id="stopBtn">🛑 Dừng</button>
+        </div>
+
+        <div id="moodSection" class="hidden" style="margin-top: 20px; border-top: 1px solid #ccc; padding-top: 20px;">
+            <p style="font-size: 1.1rem; font-weight: bold;">Cảm xúc của bạn? 😊</p>
+            <select id="moodSelect">
+                <option value="good">😊 Tập trung / Tốt</option>
+                <option value="tired">😴 Mệt mỏi</option>
+                <option value="distracted">🤯 Bị xao nhãng</option>
+            </select>
+            <button id="saveBtn">✅ Lưu kết quả</button>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <button id="statsBtn">📊 Xem Thống Kê</button>
+            <button id="resetBtn" style="background-color: #e74c3c;">🗑️ Xóa Dữ Liệu</button>
+        </div>
+        
+        <div id="chartContainer" class="hidden" style="margin-top: 20px;">
+            <canvas id="focusChart"></canvas>
+        </div>
+
+        <div id="historySection" class="hidden" style="margin-top: 20px; text-align: left; border-top: 1px solid #ccc; padding-top: 20px;">
+            <h3>Nhật ký học 📔</h3>
+            <ul id="historyList" style="list-style: none; padding: 0; max-height: 150px; overflow-y: auto;">
+                </ul>
+        </div>
+        <div id="customModal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <p id="modalMessage" style="font-size: 1.1rem; margin-bottom: 20px;">Nội dung thông báo ở đây</p>
+                <div class="modal-buttons">
+                    <button id="modalOkBtn" style="background-color: var(--primary-color);">OK</button>
+                    <button id="modalCancelBtn" class="hidden" style="background-color: #95a5a6;">Hủy</button> 
+                </div>
+            </div>
+        </div>
+
+    </div> 
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Môi trường ảo
+venv/
+env/
+
+# File tạm của Python
+__pycache__/
+*.pyc
+
+# Database (Render sẽ tự tạo mới trên server)
+*.db
+focus_data.db
+
+# File hệ thống
+.DS_Store
